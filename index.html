@@ -11,7 +11,7 @@
     <style>
         /*   web sayfasının arkaplan rengini değiştirir.  */
         body{background-color:dimgray;}
-        /* parantez öncesi yazılan tüm indexlerin font rengini etkiler. */
+        /* parantez öncesi yazılan tüm tagların font rengini etkiler. */
         h1,h2,p{color:bisque;} 
     </style>
 </head>
@@ -76,14 +76,32 @@
 
 
 
-        <!-- img title'ı görsel getirmekle görevlidir. src:source olarak kaynak ister. alt:alternative olarak eğer görsel yüklenmezse açıklama belirtir. -->
-        <img src="https://picsum.photos/400/600" alt="asd"> 
+        <!-- img tag'ı görsel getirmekle görevlidir. src:source olarak kaynak ister. alt:alternative olarak eğer görsel yüklenmezse açıklama belirtir. title ise cursor görselin üzerine geldiğinde text vb. gösterir -->
+        <!-- <img src="https://picsum.photos/400/600" alt="asd" title="rastgele görsel">  -->
 
 
-        <!-- Ayrıca dahili konum girerekten görsel yüklenebilir ve img title'ının width,height fonksiyonları kullanılarak görselin boyutu değiştirilebilir.-->
-        <img width="300" height="500" src="images/sokak.jpg" alt="görsel bulunamadı"> 
+        <!--Ayrıca dahili konum girerekten görsel yüklenebilir ve img tag'ının width fonksiyonları kullanılarak görselin boyutu değiştirilebilir.-->
+        <!-- <img width="300" height="500" src="images/sokak.jpg" alt="görsel bulunamadı" title="Kalabalık Sokak">  -->
 
-         
+        <!-- border: görsele girilen değere göre çerçeve ekler. align özelliği ise görselin konumu ayarlar  -->
+        <!-- <img src="images/sokak.jpg" border="3" align="right" title="çerçeveli"> -->
+
+
+        <!-- Görsele link vermek için a tag'ının href özelliği kullanılır. href: URL veya konum yazılır. Resim yine img tagını çağırarak eklenir. Style fonksiyonuyla düzenleme yapılır. -->
+        <!-- <a href="https://www.google.com.tr/">
+            <img src="images/sokak.jpg" alt="sokak" style="width: 200px; height: 300;" title="a href">
+        </a> -->
+
+        <!--Görsele link eklemek için map ve area kullanılır ardından img tag'ının usemap fonksiyonu çağırılır. Görselin boyutu belirtilir.Sonra bir map oluşturulur;-->
+        <img src="images/ocean.jpg" alt="img is can't load" usemap="#workmap" width="400" height="600">
+
+         <map name="workmap">
+            <!--shape:alanın şeklini belirler. coords: kordinat ister rect;left-up/x,y right-down/x,y  circle; center/x,y size px -->
+            <area shape="rect" coords="270,191,299,211" href="https://www.google.com.tr/" alt="img is can't load" title="eagle">
+            <!--href içerisine link gelir.-->
+            <area shape="rect" coords="0,345,399,599" href="https://www.google.com.tr/" alt="img is can't load" title="ocean">
+            <area shape="circle" coords="360,160,30" href="https://www.google.com.tr/" alt="img is can't load" title="sun">
+         </map>
         
 
     
