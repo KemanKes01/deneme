@@ -1,31 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!--  kodun hangi dil ile yazıldığını tarayıcı/IDE'ye bildirir. -->
+<html lang="en"> <!-- web tarayıcıya hangi dilde görüntüleme yaptığını bildirir. -->
 <head>
     <meta charset="UTF-8">
+    <!-- web sayfasının hangi cihazlarda ne boyutta  görüneğini, yakınlaştırma oranını belirler  -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- web tarayıcının sekme isminde ve arama isminde gözükür.  -->
     <title>HTML</title>
+    <!-- style içerisine yazı stili rengi yapısı boyutu arkaplan rengi gibi görünüm düzenleyici elementler yerleştirilir.
+         Ayrıca .css dosyası import edilecekse konumu buraya yazılır.  -->
     <style>
+        /*   web sayfasının arkaplan rengini değiştirir.  */
         body{background-color:dimgray;}
-        h1,h2,p{color:bisque;}
+        /* parantez öncesi yazılan tüm indexlerin font rengini etkiler. */
+        h1,h2,p{color:bisque;} 
     </style>
 </head>
+<!-- Web sayfası içerisinde görüntülemek istediğimiz herşey buraya yazılır. -->
 <body>
     <!-- <h1>İLKER AVCI</h1>
     <h2>Hakkımda</h2>
     <p>23 yaşında lise elektrik-elektronik mezunu yazılım'a hevesli zamanı bol ancak maddi durumu tam tersi olan işsiz bir bireyim.</p> -->
 
-    <!-- 
-        > içinde oluşturma 
-        ^ üst elemente geçme 
-        + element birleştirme 
-        * a,a,a,a,a= a*5
-        $ a1,a2,a3,a4,a5 = a$*5
-        # id verir
-        . class verir
-        lorem  anlamsız yazılar yazar (gerçekten aşırı anlamsız :-) 
+    
+        <!-- > içinde oluşturma  -->
+        <!-- ul>li --> 
+        <ul>
+            <li></li>
+        </ul>
+
+        <!-- ^ üst elemente geçme  -->
+        <!-- ul>li^p --> 
+        <ul>
+            <li></li>
+        </ul>
+        <p></p>
+
+        <!-- + element birleştirme -->
+        <!-- h1+ul+p -->
+        <h1></h1>
+        <ul></ul>
+        <p></p>
+
+        <!-- * oluşturma katsayısı -->
+        <!-- p*3 -->
+        <p></p>
+        <p></p>
+        <p></p>
+
+
+        <!-- $ sıralama numarası verir -->
+        <!-- index$*5 -->
+        <index1></index1>
+        <index2></index2>
+        <index3></index3>
+        <index4></index4>
+        <index5></index5>
+
+        
+        <!-- # id verir -->
+        <!-- h1#title -->
+        <h1 id="title"></h1>
+
+
+        <!-- . class verir -->
+        <!-- p.index -->
+        <p class="index"></p>
+
+
+        <!-- lorem  anlamsız yazılar yazar (kelime sınırı sonuna sayı olarak yazılır.)  -->
+        <!-- p>lorem5 -->
+        <p>Lorem ipsum dolor sit amet.</p>
          
 
-     -->
+    
     
 </body>
 </html>
