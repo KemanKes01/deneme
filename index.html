@@ -97,14 +97,57 @@
 
          <map name="workmap">
             <!--shape:alanın şeklini belirler. coords: kordinat ister rect;left-up/x,y right-down/x,y  circle; center/x,y size px -->
-            <area shape="rect" coords="270,191,299,211" href="https://www.google.com.tr/" alt="img is can't load" title="eagle">
+            <area shape="rect" coords="270,191,299,211" href="https://www.google.com.tr/" title="eagle">
             <!--href içerisine link gelir.-->
-            <area shape="rect" coords="0,345,399,599" href="https://www.google.com.tr/" alt="img is can't load" title="ocean">
-            <area shape="circle" coords="360,160,30" href="https://www.google.com.tr/" alt="img is can't load" title="sun">
+            <area shape="rect" coords="0,345,399,599" href="https://www.google.com.tr/" title="ocean">
+            <area shape="circle" coords="360,160,30" href="https://www.google.com.tr/" title="sun">
          </map>
-        
 
-    
+         <!-- onload Event'i Kullanımı Bu olay görsel yüklenmesi tamamlandığında çalışacak fonksiyonu belirler.
+             Herhangi bir nedenle görsel yüklenemezse ya da belirtilen adreste resim yoksa fonksiyon çalışmaz.
+             Aşağıdaki örnekte görsel yüklenmesi tamamlandığında resimYuklendi() 
+             fonksiyonu çalışacak ve ekrana Resim Yüklendi. uyarısı JavaScript tarafından bastırılacak-->
+        <img src="images/workplace.jpg" onload="resimYuklendi()">
+
+        <!-- picture Elementi ile Kullanım HTML5 ile gelen picture elementi web sayfamızda responsive image'ler 
+            kullanmamız konusunda büyük kolaylıklar sağlıyor. Bir tane img ve birden fazla source içerebilir. 
+            picture tagi ekran boyutlarına göre birden çok source kulllanmamızı sağlar bu sayede ekran boyutu 
+            değiştikçe farklı image'leri kullanabilirsiniz.-->
+            
+        <picture>
+            <!--Örnek: Burada ekran genişliğinin 600 pikselden küçük olduğu 
+                durumlarda başka bir görsel kullanılacak. -->
+            <source srcset="https://picsum.photos/600" media="(min-width: 600px)">
+
+            <img src="image/workplace.jpg" alt="">
+        </picture>
+
+        <h2>Linkler ile Çalışmak; </h2>
+
+        <!--
+            1-Başka bir web sitesine git 
+            2-Başka bir sayfaya git 
+            3-Aynı sayfa içinde bir yere git
+            4-Mail At
+            5-Telefon Et
+        -->
+
+        <ol>
+            <li><a href="https://www.google.com.tr" target="-blank"> google search</a></li>
+            <li><a href="main.html">Main Sayfası</a></li>
+            <li><a href="#end">Sayfa sonuna git</a></li>
+            <li><a href="mailto:ghost_90_1999@hotmail.com" target="_blank"> Mail At</a></li>
+            <li><a href="tel:+905522090864">Telefon No</a></li>
+        </ol>
+        <img src="https://picsum.photos/800/800" alt="">
+        <br>
+        <p id="end">Sayfa sonu</p>
     
 </body>
+<script>
+    //106. satırdaki açıklamanın devamı.
+    function resimYuklendi() {
+        alert("Picture is load");
+    }
+</script>
 </html>
